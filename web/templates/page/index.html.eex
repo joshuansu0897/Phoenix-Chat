@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col-md-12 alert alert-success">
-    Hola, <strong><span id="Usuario"><%= @conn.params["user"] %></span></strong>
+    Hola <strong><span id="Usuario"><%= @conn.params["user"] %></span></strong>,
     bienvenido al chat
   </div>
 
@@ -11,7 +11,7 @@
   </div>
 
   <div class="col-md-4">
-    <h4>Usuarios Conectado</h4>
+    <h4>Usuarios Conectados</h4>
     <ul id="ListaUsuarios" class="list-unstyled">
       <li>Cargando usuarios conectados...</li>
     </ul>
