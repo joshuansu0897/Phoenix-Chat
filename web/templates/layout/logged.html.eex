@@ -1,0 +1,8 @@
+<%= if logged_in?(@conn) do %>
+	<%= link "Salir", to: session_path(@conn, :delete, :access),
+		method: :delete, class: "btn btn-danger" %>
+	<%= link "#{current_user(@conn).email}", to: user_path(@conn, :show, current_user(@conn)) %>
+<% else %>
+	<%= link "Crear Cuenta", to: user_path(@conn, :new),vclass: "btn btn-info" %>
+	<%= link "Iniciar Sesion", to: session_path(@conn, :new),vclass: "btn btn-primary" %>
+<% end %>

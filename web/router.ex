@@ -22,14 +22,18 @@ defmodule Chatter.Router do
   end
 
   scope "/", Chatter do
-    pipe_through :browser # Use the default browser stack
-
-    #Lo puse yo
-    resources "/users", UserController
-    #Lo puse yo
-
-    get "/", PageController, :index
+    pipe_through :browser
+    resources "/users", UserController, [:new, :create]
+    resources "/sessions", SessionController, only: [:create, :delete]
+    get "/", SessionController, :new
   end
+
+  scope "/", Chatter do
+    pipe_through [:browser, :browser_auth] 
+    resources "/users", UserController, only: [:show, :index, :update]
+    get "/chat", PageController, :index
+  end
+
 
   # Other scopes may use custom stacks.
   # scope "/api", Chatter do

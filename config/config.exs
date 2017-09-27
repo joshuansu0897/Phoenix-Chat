@@ -31,7 +31,7 @@ config :guardian, Guardian,
   allowed_drift: 2000,
   verify_issuer: true, #opcional
   secret_key: "cSJhTneE0OF0WOHDwdUJJlKy/YNVXfgHJ7nEcyI2YxWWR+9RArO2RXo/zyWcUkPr",
-  serializer: Chatter.GuardianSeralizer
+  serializer: Chatter.GuardianSerializer
 
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.

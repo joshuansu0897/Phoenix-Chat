@@ -1,0 +1,20 @@
+<h1>Iniciar Sesion</h1>
+
+<%= form_for @conn, session_path(@conn, :create), [as: :session], fn f -> %>
+<div class="form-group">
+	<%= label f, :Correo, class: "control-label" %>
+    <%= email_input f, :email, class: "form-control" %>
+    <%= error_tag f, :email %>
+</div>
+
+<div class="form-group">
+    <%= label f, :Contraseña, class: "control-label" %>
+    <%= password_input f, :password, class: "form-control" %>
+    <%= error_tag f, :password %>
+</div>
+
+<div class="form-group">
+	<%= submit "Entrar", class: "btn btn-primary" %>
+</div>
+
+<% end %>
