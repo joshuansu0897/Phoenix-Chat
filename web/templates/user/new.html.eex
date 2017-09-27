@@ -2,4 +2,4 @@
 
 <%= render "form.html", changeset: @changeset, action: user_path(@conn, :create) %>
 
-<%= link "Regresar", to: user_path(@conn, :index) %>
+<%= link "Regresar(Esto no es un bug, lo deje yo para ver los correos)", to: user_path(@conn, :index) %>

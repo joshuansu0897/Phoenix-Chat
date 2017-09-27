@@ -7,4 +7,6 @@
   </li>
 </ul>
 
+</ul>
+<%= link "Chat", to: page_path(@conn, :index), class: "btn btn-info" %><br><br>
 <%= link "Regresar", to: user_path(@conn, :index) %>
